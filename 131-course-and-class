@@ -6,9 +6,10 @@ public void createCourseAndClass(String name, String description) {
    insert course;
    apxio__Class__c newclass = new apxio__Class__c();
    newclass.Name = name;
-   newclass.apxio__Course__c = course.Id;
-   String descr = description.left(255);
-   newclass.apxio__Description__c = descr;
+  
+    String truncatedDescription = description.length() > 255 ? description.left(255) : description;
+   newclass.apxio__Description__c = truncatedDescription;
+    newclass.apxio__Course__c = course.Id;
    insert newclass;
 
 }
