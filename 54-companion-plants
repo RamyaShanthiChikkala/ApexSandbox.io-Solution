@@ -1,0 +1,7 @@
+public Boolean companionPlants(String plant1, String plant2) {
+
+    Set<String> companionPairs = new Set<String>{'lettuce-onions','lettuce-cucumbers','onions-carrots','onions-tomatoes'};
+    String pair1 = plant1+'-'+plant2;
+    String pair2 = plant2+'-'+plant1;
+    return companionPairs.contains(pair1) || companionPairs.contains(pair2);
+}
