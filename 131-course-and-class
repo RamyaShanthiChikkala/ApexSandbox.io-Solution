@@ -4,10 +4,10 @@ public void createCourseAndClass(String name, String description) {
    course.Name = name ;
    course.apxio__Course_Details__c = description;
    insert course;
-   apxio__Class__c class = new apxio__Class__c();
-   class.apxio__Course__c = course.Id;
+   apxio__Class__c newclass = new apxio__Class__c();
+   newclass.apxio__Course__c = course.Id;
    String descr = description.left(255);
-   class.apxio__Description__c = descr;
-   insert class;
+   newclass.apxio__Description__c = descr;
+   insert newclass;
 
 }
