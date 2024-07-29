@@ -1,13 +1,9 @@
 public List<apxio__Student__c> selectStudentsWithoutContactInfo() {
   
-  List<apxio__Student__c> studentInfoMiss = List<apxio__Student__c>();
+  List<apxio__Student__c> studentInfoMiss = new List<apxio__Student__c>();
 
-  
-studentInfoMiss =  [SELECT Id, Name
-                                          FROM apxio__Student__c
-                                          WHERE apxio__Active__c = true
-                                          AND (apxio__Email__c = null OR apxio__Phone__c = null)
-                                          ORDER BY Name ASC];
+  studentInfoMiss = [SELECT Id , Name from apxio__Student__c where apxio__Active__c=true AND (apxio__Email__c = '' OR apxio__Phone__c = '') ORDER by Name ASC ];
+
   return studentInfoMiss;
   
 }
