@@ -1,0 +1,8 @@
+public String aOrAn(String word) {
+  
+ String lowerWord = word.toLowerCase();
+ if(lowerWord.startsWith('a')|| lowerWord.startsWith('e') || lowerWord.startsWith('i')||lowerWord.startsWith('o')||lowerWord.startsWith('u'))
+ return 'an ' + word;
+ else
+ return 'a ' + word;
+}
