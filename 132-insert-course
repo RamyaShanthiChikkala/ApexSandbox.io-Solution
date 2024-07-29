@@ -1,15 +1,11 @@
 public Id insertCourse(String name, String details, Integer credits) {
   
+  Set<Integer> picVal = new Set<Integer>{1,2,3,4};
+  if(!picVal.contains(credits))
+  return null;
   apxio__Course__c newCourse = new apxio__Course__c();
   newCourse.Name = name;
   newCourse.apxio__Course_Details__c = details;
-  Set<Integer> pickList = new Set<Integer>{1,2,3,4};
-  
-  if(!pickList.contains(credits))
-  {
-      return null
-  }
-  else
   newCourse.apxio__Credits__c = credits;
   insert newCourse;
   return newCourse.Id; 
