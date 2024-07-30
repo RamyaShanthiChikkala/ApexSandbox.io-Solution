@@ -4,25 +4,25 @@ public List<Account> checkAccounts(List<Account> accounts)
     if(accounts == null)
     throw new IllegalArgumentException('accounts should not be null');
      
-     for(Account ac : accounts)
-     {
-         if(ac.BillingCity == '' || ac.BillingCity == null)
-         throw new AccountException('Invalid BillingCity');
-     }
+    
       
       
     }
     catch (AccountException ae)
     {
         ae.getMessage();
+
     }
     catch(IllegalArgumentException ie)
     {
         ie.getMessage();
     }
-    finally{
-return accounts;
-    }
+     for(Account ac : accounts)
+     {
+         if(ac.BillingCity == '' || ac.BillingCity == null)
+         throw new AccountException('Invalid BillingCity');
+     }
+     return accounts;
 }
 
 //do not remove the following custom-defined exception
