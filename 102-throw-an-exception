@@ -12,8 +12,11 @@ public List<Account> checkAccounts(List<Account> accounts)
       
       
     }
-   
-  return accounts;
+    finally
+    {
+        return accounts;
+    }
+  
 }
 
 //do not remove the following custom-defined exception
