@@ -1,0 +1,28 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    try{
+    if(accounts == null)
+    throw IllegalArgumentException;
+     
+     for(Account ac : accounts)
+     {
+         if(ac.BillingCity == '' || ac.BillingCity == null)
+         throw AccountException;
+     }
+      
+      return accounts;
+    }
+    catch (AccountException ae)
+    {
+        ae.getMessage();
+    }
+    catch(IllegalArgumentException ie)
+    {
+        ie.getMessage();
+    }
+    
+
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
