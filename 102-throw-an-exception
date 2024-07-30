@@ -2,12 +2,12 @@ public List<Account> checkAccounts(List<Account> accounts)
 {
     try{
     if(accounts == null)
-    throw Exception;
+    throw new IllegalArgumentException('accounts should not be null');
      
      for(Account ac : accounts)
      {
          if(ac.BillingCity == '' || ac.BillingCity == null)
-         throw AccountException;
+         throw new AccountException('Invalid BillingCity');
      }
       
       return accounts;
@@ -16,7 +16,7 @@ public List<Account> checkAccounts(List<Account> accounts)
     {
         ae.getMessage();
     }
-    catch(Exception ie)
+    catch(IllegalArgumentException ie)
     {
         ie.getMessage();
     }
