@@ -9,8 +9,8 @@ public void enrollStudents(List<String> emails, String className) {
    for( apxio__Student__c student : studentList)
    {
        apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c();
-       apxio__Class_Enrollment__c.apxio__Student__c = student.Id;
-       apxio__Class_Enrollment__c.apxio__Offered_Class__c = studentClass.Id;
+       enrollment.apxio__Student__c = student.Id;
+       enrollment.apxio__Offered_Class__c = studentClass.Id;
        enrollmentList.add(enrollment);
    }
 
