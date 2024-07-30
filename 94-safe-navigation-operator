@@ -1,0 +1,11 @@
+public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
+  
+Account acc = accounts.get(0);
+
+String billCity = acc.BillingCity;
+
+if(billCity == null )
+return null;
+else return billCity.toUpperCase();
+
+}
