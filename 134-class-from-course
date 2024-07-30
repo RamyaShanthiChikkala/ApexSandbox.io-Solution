@@ -1,6 +1,8 @@
 public Id classFromCourse(String courseName) {
   
   apxio__Course__c course = [SELECT Id, Name from apxio__Course__c WHERE Name =: courseName LIMIT 1];
+  if(course == null)
+  return null;
   apxio__Class__c classNew = new apxio__Class__c();
       
   classNew.apxio__Course__c = course.Id;
