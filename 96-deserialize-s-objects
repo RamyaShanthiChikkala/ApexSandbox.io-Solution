@@ -5,5 +5,5 @@ public List<Account> getAccountsFromJSONString(String inputJSON){
         acList = (List<Account>)(JSON.deserialize(inputJSON,Account.class));
     }
 
-    return ac;
+    return acList;
 }
