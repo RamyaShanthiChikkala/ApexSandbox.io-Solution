@@ -16,7 +16,7 @@ public List<Account> checkAccounts(List<Account> accounts)
     finally
     {
         System.debug('Exception occured');
-        return;
+        
     }
   return accounts;
 }
