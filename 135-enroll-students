@@ -1,7 +1,10 @@
 public void enrollStudents(List<String> emails, String className) {
     
-   apxio__Class__c studentClass = [select Id from apxio__Class__c where Name = :className LIMIT 1];
- 
+   List<apxio__Class__c> studentClass = [select Id from apxio__Class__c where Name = :className LIMIT 1];
+  
+  if(studentClass.isEmpty()) return;
+
+    
    List<apxio__Student__c> studentList = [Select Id,apxio__Email__c from apxio__Student__c where apxio__Email__c IN emails ];
    
    List<apxio__Class_Enrollment__c> enrollmentList = new List<apxio__Class_Enrollment__c>();
@@ -10,7 +13,7 @@ public void enrollStudents(List<String> emails, String className) {
    {
        apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c();
        enrollment.apxio__Student__c = student.Id;
-       enrollment.apxio__Offered_Class__c = studentClass.Id;
+       enrollment.apxio__Offered_Class__c = studentClass[0].Id;
        enrollmentList.add(enrollment);
    }
 
