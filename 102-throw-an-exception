@@ -12,11 +12,13 @@ public List<Account> checkAccounts(List<Account> accounts)
       
       
     }
+    
     finally
     {
-        return accounts;
+        System.debug('Exception occured');
+        return;
     }
-  
+  return accounts;
 }
 
 //do not remove the following custom-defined exception
