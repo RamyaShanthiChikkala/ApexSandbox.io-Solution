@@ -2,7 +2,7 @@ public List<Account> checkAccounts(List<Account> accounts)
 {
     try{
     if(accounts == null)
-    throw IllegalArgumentException;
+    throw Exception;
      
      for(Account ac : accounts)
      {
@@ -16,11 +16,11 @@ public List<Account> checkAccounts(List<Account> accounts)
     {
         ae.getMessage();
     }
-    catch(IllegalArgumentException ie)
+    catch(Exception ie)
     {
         ie.getMessage();
     }
-    
+
 
 }
 
