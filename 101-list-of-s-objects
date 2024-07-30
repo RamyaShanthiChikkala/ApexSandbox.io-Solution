@@ -13,11 +13,15 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
        for(Account ac : accounts)
        sobList.add(ac);
    }
+   else
+   sobList.add(null);
    if(!contacts.isEmpty())
    {
        for(Contact con : contacts)
        sobList.add(con);
    }
+   else
+    sobList.add(null);
 
    return sobList;
 }
