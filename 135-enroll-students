@@ -1,8 +1,8 @@
 public void enrollStudents(List<String> emails, String className) {
     
-   apxio__Class__c studentClass = [select Id from apxio__Class__c where Name= :className];
+   apxio__Class__c studentClass = [select Id from apxio__Class__c where Name = :className LIMIT 1];
  
-   List<apxio__Student__c> studentList = [Select Id form apxio__Student__c where apxio__Email__c IN emails ];
+   List<apxio__Student__c> studentList = [Select Id,apxio__Email__c form apxio__Student__c where apxio__Email__c IN emails ];
    
    List<apxio__Class_Enrollment__c> enrollmentList = new List<apxio__Class_Enrollment__c>();
 
