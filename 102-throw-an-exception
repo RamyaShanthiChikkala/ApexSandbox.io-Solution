@@ -10,7 +10,7 @@ public List<Account> checkAccounts(List<Account> accounts)
          throw new AccountException('Invalid BillingCity');
      }
       
-      return accounts;
+      
     }
     catch (AccountException ae)
     {
@@ -20,7 +20,7 @@ public List<Account> checkAccounts(List<Account> accounts)
     {
         ie.getMessage();
     }
-
+return accounts;
 
 }
 
