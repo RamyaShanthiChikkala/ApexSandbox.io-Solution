@@ -12,16 +12,7 @@ public List<Account> checkAccounts(List<Account> accounts)
       
       
     }
-    catch (AccountException ae)
-    {
-        ae.getMessage();
-        accounts = null;
-    }
-    catch(IllegalArgumentException ie)
-    {
-        ie.getMessage();
-        accounts = null;
-    }
+   
   return accounts;
 }
 
