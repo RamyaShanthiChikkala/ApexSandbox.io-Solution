@@ -1,0 +1,7 @@
+public Boolean isKeyAccount(Account a) {
+   String ind = a.Industry;
+   if((ind == 'Banking' && a.AnnualRevenue >= 600000) || (ind == 'Technology' && a.AnnualRevenue >= 800000)|| (ind == 'Retail' && a.AnnualRevenue >= 2000000) || ((ind != 'Technology'&& ind != 'Retail' && ind != 'Banking' && a.AnnualRevenue >= 500000))
+    return true;
+    else
+    return false;
+}
