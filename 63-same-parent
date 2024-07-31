@@ -2,7 +2,7 @@ public Boolean sameParent(Contact c, Opportunity opp) {
   
   if(c.AccountId == null || c.AccountId == '' || opp.AccountId == null || opp.AccountId=='')
    return false;
-  else if (String(c.AccountId) == String(opp.AccountId))
+  else if (c.AccountId == opp.AccountId)
   return true;
   else
   return false;
