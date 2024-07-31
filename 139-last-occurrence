@@ -4,7 +4,7 @@ public static Integer findLast(List<Integer> nums, Integer target) {
  for(Integer i =0 ; i< nums.size() ; i++ )
  {
      if(nums[i] == target)
-     loc = num;
+     loc = i;
  }
  return loc;
 }
