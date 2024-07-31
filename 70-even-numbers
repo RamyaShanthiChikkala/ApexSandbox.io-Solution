@@ -1,9 +1,10 @@
 public List<Integer> evenNumbers(Integer n) {
     
     List<Integer> positive = new List<Integer>();
+     Integer a ;
     for(Integer i = 1 ; i <= n ; i = i++)
     {
-        Integer a = 2*i ;
+        a = 2*i ;
         positive.add(a);
     }
     return positive;
