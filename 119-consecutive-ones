@@ -5,11 +5,15 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
     for(Integer num : numbers)
     {
         if(num == 0)
-        {
+        { 
+            if(count > max)
             max = count;
             count = 0;
         }
         else
         count++;
     }
+
+    return max;
+
 }
