@@ -1,0 +1,22 @@
+public Integer secondLargest(List<Integer> numbers) {
+  
+  if(numbers.size() < 2) return 0;
+  Integer max = numbers[0];
+  Integer secondLargestNum = numbers[1];
+  if(secondLargestNum > max)
+  secondLargest = max;
+ for(Integer i = 2 ; i < numbers.size(); i++)
+ {
+     if(numbers[i] > max)
+     {
+         secondLargestNum = max;
+         max = numbers[i];
+     }
+    else if(numbers[i] > secondLargestNum)
+    {
+        secondLargestNum = numbers[i];
+    }
+
+ }
+ return secondLargestNum;
+}
