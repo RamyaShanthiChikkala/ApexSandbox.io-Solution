@@ -2,6 +2,6 @@ public Boolean containsDuplicates(List<Integer> nums) {
   
   Set<Integer> s = new Set<Integer>();
   s.addAll(nums);
-   return (s.size() != nums.size())
+   return (s.size() != nums.size());
   
 }
