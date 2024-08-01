@@ -12,7 +12,7 @@ public Integer secondLargest(List<Integer> numbers) {
          secondLargestNum = max;
          max = numbers[i];
      }
-    else if(numbers[i] > secondLargestNum)
+    else if(numbers[i] > secondLargestNum && (numbers[i] != max)) 
     {
         secondLargestNum = numbers[i];
     }
