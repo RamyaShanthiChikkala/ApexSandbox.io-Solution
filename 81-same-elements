@@ -1,0 +1,13 @@
+public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
+   
+   Set<Integer> set1 = nums1.addAll();
+    Set<Integer> set2 = nums2.addAll();
+    if(set1.size() != set2.size())
+    return false;
+    for(Integer i = 0 ; i< nums1.size(); i++)
+    {
+        if(!set1.contains(nums2[i]))
+        return false;
+    }
+    return true;
+}
