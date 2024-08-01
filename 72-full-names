@@ -6,7 +6,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
   return fullNameList;
   for(Integer i = 0 ; i < firstNames.size() ; i++)
   {
-      fullNameList.put(firstNames[i]+ ' '+ lastNames[i]);
+      fullNameList.add(firstNames[i]+ ' '+ lastNames[i]);
   }
   return fullNameList;
 }
