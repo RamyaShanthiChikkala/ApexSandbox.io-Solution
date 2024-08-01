@@ -2,28 +2,22 @@ public boolean isSorted(List<Integer> numbers) {
  
  if(numbers.size() < 3)
  return true;
- Integer flag = 1;
+   Boolean isAscending = true;
+   Boolean isDescending = true;
  
- if(numbers[0] >= numbers[1])
- {
+
      for(Integer i = 0 ; i < numbers.size()-1; i++)
      {
-         flag = -1;
-         if(numbers[i+1] < =numbers[i])
-         return false;
+         if(numbers[i] < =numbers[i+1])
+         {
+             isDescending = false; 
+         }
+         else if(numbers[i] >= numbers[i+1] )
+         {
+             isAscending = true;
+         }
      }
- }
- else if((numbers[0] <= numbers[1]))
- {
-     for(Integer i = 0 ; i < numbers.size()-1; i++)
-     {
-         flag = -1;
-         if(numbers[i+1] >= numbers[i])
-         return false;
-     }
- }
- else if (flag == 1)
- return false;
- return true;
+ 
+ return isAscending || isDescending ;
 
 }
