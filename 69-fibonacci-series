@@ -12,11 +12,10 @@ c = a+b;
 fib.add(c);
 
 for(Integer i = 2 ; i < = n ; i++)
-{
-    
+{ 
+    fib.add(c);
     a = b ;
     b = i;
-    fib.add(c);
     c = a + b;
 }
 
