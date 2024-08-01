@@ -9,7 +9,7 @@ public Integer secondLargest(List<Integer> numbers) {
  {
      if(numbers[i] > max)
      {
-         secondLargestNum = max;
+         secondLargestNum = (max == -2147483647 - 1) ?  -2147483647 - 1 : max;
          max = numbers[i];
      }
     else if(numbers[i] >= secondLargestNum && (numbers[i] != max)) 
