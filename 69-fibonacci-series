@@ -1,0 +1,24 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    
+Integer a = 0;
+
+Integer b = 1;
+
+Integer c = 0;
+List<Integer> fib = new List<Integer>();
+if(n<1)
+return fib;
+if(n == 1)
+{
+    fib.add(b);
+}
+for(Integer i = 1 ; i < n ; i++)
+{
+    c = a + b;
+    a = b ;
+    b =  i;
+    fib.add(c);
+}
+
+return fib;
+}
