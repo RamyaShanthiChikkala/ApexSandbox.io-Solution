@@ -8,7 +8,7 @@ Integer c = 0;
 List<Integer> fib = new List<Integer>();
 if(n<1)
 return fib;
-c= a+b;
+c = a+b;
 fib.add(c);
 
 for(Integer i = 2 ; i < = n ; i++)
