@@ -8,11 +8,10 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
      
 
              sum = indSum.get(ac.Industry) + ac.AnnualRevenue;
-       
         else
         
              sum = indSum.get(ac.Industry);
-            indSum.put(indSum.get(ac.Industry),ac.AnnualRevenue);
+            indSum.put(ac.Industry,ac.AnnualRevenue);
        
         indSum.put(ac.Industry,sum);
     }
