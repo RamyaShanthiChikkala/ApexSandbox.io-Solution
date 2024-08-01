@@ -1,7 +1,9 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
    
-   Set<Integer> set1 = nums1.addAll();
-    Set<Integer> set2 = nums2.addAll();
+   Set<Integer> set1 = new Set<Integer>();
+    set1.addAll(nums1);
+    Set<Integer> set2 = new Set<Integer>();
+    set2.addAll(nums2);
     if(set1.size() != set2.size())
     return false;
     for(Integer i = 0 ; i< nums1.size(); i++)
