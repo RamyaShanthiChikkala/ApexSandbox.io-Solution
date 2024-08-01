@@ -5,15 +5,16 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     for(Account ac : accounts)
     {
         if(indSum.containsKey(ac.Industry))
-        {
+     
 
              sum = indSum.get(ac.Industry) + ac.AnnualRevenue;
-             indSum.put(ac.Industry,sum);
-        }
+       
         else
-        {
+        
+             sum = indSum.get(ac.Industry);
             indSum.put(indSum.get(ac.Industry),ac.AnnualRevenue);
-        }
+       
+        indSum.put(ac.Industry,sum);
     }
 
     return indSum;
