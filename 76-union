@@ -1,0 +1,13 @@
+public Set<Integer> setUnion(Set<Integer> set1, Set<Integer> set2) {
+  
+  Set<Integer> unSet = new Set<Integer>();
+  for(Integer a : set1)
+  {
+      unSet.add(a);
+  }
+  for(Integer b : set2)
+  {
+      unSet.add(b);
+  }
+  return unSet;
+}
