@@ -10,13 +10,14 @@ if(n<1)
 return fib;
 c = a+b;
 fib.add(c);
-
+if(n >= 2)
+fib.add(c);
 for(Integer i = 3 ; i <= n ; i++)
 { 
     c = a + b;
     fib.add(c);
     a = b ;
-    b = i-1;
+    b = i;
  
 }
 
