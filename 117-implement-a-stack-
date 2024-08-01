@@ -8,17 +8,19 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-
+       if(!objList.isEmpty())
        return objList.remove(objList.size()-1);
     }
     
     public Integer size() {
         //implement size
+        
         return objList.size();
     }
     
     public Object peek(){
         //implement peek
+        if(!objList.isEmpty())
         return objList.get(objList.size()-1);
     }
     
