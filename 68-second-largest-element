@@ -7,12 +7,12 @@ public Integer secondLargest(List<Integer> numbers) {
   secondLargestNum = max;
  for(Integer i = 2 ; i < numbers.size(); i++)
  {
-     if(numbers[i] > max)
+     if(numbers[i] >= max)
      {
          secondLargestNum = max;
          max = numbers[i];
      }
-    else if(numbers[i] > secondLargestNum)
+    else if(numbers[i] >= secondLargestNum)
     {
         secondLargestNum = numbers[i];
     }
