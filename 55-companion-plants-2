@@ -2,8 +2,8 @@ public Boolean companionPlants(List<String> plants) {
   Set<String> companionPairs = new Set<String>{'lettuce-onions','lettuce-cucumbers','onions-carrots','onions-tomatoes'};
    for(Integer i = 0 ; i < plants.size() - 1 ; i++)
    {
-       String pair1 = plants[0] + '-' + plants[1];
-       String pair2 = plants[1] + '-' + plants[0];
+       String pair1 = plants[i] + '-' + plants[i+1];
+       String pair2 = plants[i+1] + '-' + plants[i];
        if( (companionPairs.contains(pair1) || (companionPairs.contains(pair2)))
        continue;
        else
