@@ -12,7 +12,7 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
            
    
         else
-           sum =  ac.AnnualRevenue
+           sum =  ac.AnnualRevenue;
               
         indSum.put(ind, sum);
     }
