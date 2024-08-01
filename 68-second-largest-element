@@ -1,7 +1,7 @@
 public Integer secondLargest(List<Integer> numbers) {
   
   if(numbers.size() < 2) return 0;
-  Integer max = (numbers[0] == -2147483648) ?  -2147483647 - 1 : numbers[0]; 
+  Integer max = (numbers[0] == -2147483648 - 1) ?  -2147483647 - 1 : numbers[0]; 
   Integer secondLargestNum = numbers[1];
   if(secondLargestNum > max)
   secondLargestNum = max;
