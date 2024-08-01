@@ -4,16 +4,17 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     Decimal sum = 0;
     for(Account ac : accounts)
     {
-        if(indSum.containsKey(ac.Industry)){
+        String ind = ac.Industry;
+        if(indSum.containsKey(ind){
 
-            sum = indSum.get(ac.Industry) + ac.AnnualRevenue;
+            sum = indSum.get(ind) + ac.AnnualRevenue;
               
         }
              
         else
         
-             sum = indSum.get(ac.Industry);
-            indSum.put(ac.Industry,ac.AnnualRevenue);
+             sum = indSum.get(ind);
+           
        
         indSum.put(ac.Industry,sum);
     }
