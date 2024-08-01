@@ -4,7 +4,9 @@ public Boolean companionPlants(List<String> plants) {
    {
        String pair1 = plants[0] + '-' + plants[1];
        String pair2 = plants[1] + '-' + plants[0];
-       if( !(companionPairs.contains(pair1) || (companionPairs.contains(pair2)))
+       if( (companionPairs.contains(pair1) || (companionPairs.contains(pair2)))
+       continue;
+       else
        return false;
 
    }
