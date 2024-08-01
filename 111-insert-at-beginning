@@ -7,4 +7,5 @@ public void insertAtStart(String cityName, List<String> cities) {
        cities.set(i,cityName);
        cityName = temp;
    }
+   cities.add(cityName);
 }
