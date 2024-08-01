@@ -3,7 +3,7 @@ public Set<Id> accountIds(List<Opportunity> opps) {
 Set<Id> relatedSet = new Set<Id>();
  for(Opportunity op : opps)
  {
-     if(op.AccountId != null && op.AccountId != '' && op.AccountId.length() == 18)
+     if(op.AccountId != null && op.AccountId != '')
      relatedSet.add(op.AccountId);
      
  }
