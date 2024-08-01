@@ -14,6 +14,6 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
             caseList.add(c);
             caseSheet.put(c.Type , caseList);
         }
-        caseList = new caseList();
+        caseList = new List<Case>();
     }
 }
