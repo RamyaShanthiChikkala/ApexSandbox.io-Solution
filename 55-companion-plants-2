@@ -1,6 +1,7 @@
 public Boolean companionPlants(List<String> plants) {
   Set<String> companionPairs = new Set<String>{'lettuce-onions','lettuce-cucumbers','onions-carrots','onions-tomatoes'};
-   
+   if(plants.size() < 2)
+   return false;
    for(Integer i = 0 ; i < plants.size() - 1 ; i++)
    {
        String pair1 = plants[i] + '-' + plants[i+1];
