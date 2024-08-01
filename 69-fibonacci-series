@@ -21,7 +21,7 @@ for(Integer i = 3 ; i <= n ; i++)
     c = a + b;
     fib.add(c);
     a = b ;
-    b = i;
+    b = c;
  
 }
 
