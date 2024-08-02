@@ -2,10 +2,10 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     
     Integer left = 0 ;
     Integer right = opportunities.size();
-    Integer i = right/2 ;
-
+    
     while(left < right)
     {
+        Integer i = left + (right - left) / 2;
         if(opportunities[i].Amount < target)
         {
             left = i+1;
