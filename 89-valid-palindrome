@@ -8,7 +8,7 @@ str = str.toLowerCase();
 Integer n = str.length();
 for (Integer i = 0; i < str.length(); i++) {
             Integer c = str.charAt(i);
-            if( c != str.charAt(n-i))
+            if( c != str.charAt(n-i-1))
             return false;
 }
 return true;
