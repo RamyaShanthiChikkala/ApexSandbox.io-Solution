@@ -32,10 +32,8 @@ public class LinkedList{
         if(head.next != null)
         head = head.next;
         else
-        {
         tail = null;
         size--;
-        }
         return frontVal;
 
     }
