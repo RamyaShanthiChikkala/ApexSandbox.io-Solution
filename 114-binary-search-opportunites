@@ -6,16 +6,18 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
 
     while(left < right)
     {
-        if(opportunities[i] < target)
+        if(opportunities[i].Amount < target)
         {
             left = i+1;
         }
-        else if(opportunities[i] < target)
+        else if(opportunities[i].Amount < target)
         {
             right = i+1;
         }
         else
         return i;
     }
+
+    return -1;
 
 }
