@@ -11,5 +11,5 @@ for (Integer i = 0; i < str.length(); i++) {
             if( c != str.charAt(n-i))
             return false;
 }
-
+return true;
 }
