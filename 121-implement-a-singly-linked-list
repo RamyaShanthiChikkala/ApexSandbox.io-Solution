@@ -26,11 +26,11 @@ public class LinkedList{
     }
     public Integer removeFromFront(){
 
-       if (head == null) {
+        if (head == null) {
             return null;
         }
         Integer frontVal = head.data;
-        if (head.next == null) { 
+        if (head.next == null) { // Only one element in the list
             head = null;
             tail = null;
         } else {
@@ -38,8 +38,8 @@ public class LinkedList{
         }
         size--;
         return frontVal;
-
     }
+
     public void addToTail(Integer value){
        Node newNode = new Node(value);
        if(tail == null)
