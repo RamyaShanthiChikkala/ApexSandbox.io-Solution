@@ -9,12 +9,15 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         if(opportunities[i] < target)
         {
             left = i+1;
-            
+            left++;
+            right--;
         }
         else if(opportunities[i] < target)
         {
-            right = i+1;
-           
+            right = i;
+            left++;
+            right--;
+        }
         else
         return i;
 
