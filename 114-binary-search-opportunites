@@ -5,6 +5,6 @@ for(Integer i = 0 ; i < opportunities.size() ; i++)
     if(opportunities[i].Amount == target)
     return i;
 }
-return null;
+return -1;
 
 }
