@@ -1,0 +1,10 @@
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    
+for(Integer i = 0 ; i < opportunities.size() ; i++)
+{
+    if(opp.Amount == target)
+    return i;
+}
+return null;
+
+}
