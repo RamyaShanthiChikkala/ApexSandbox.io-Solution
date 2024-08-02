@@ -30,7 +30,7 @@ public class LinkedList{
             return null;
         }
         Integer frontVal = head.data;
-        if (head.next == null) { // Only one element in the list
+        if (head.next == null) { 
             head = null;
             tail = null;
         } else {
