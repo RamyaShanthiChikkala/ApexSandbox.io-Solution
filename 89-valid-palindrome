@@ -7,7 +7,7 @@ str = matcher.replaceAll('');
 str.toLowerCase();
 Integer n = str.length();
 for (Integer i = 0; i < str.length(); i++) {
-            Char c = str.charAt(i);
+            Integer c = str.charAt(i);
             if( c != str.charAt(n-i))
             return false;
 }
