@@ -3,7 +3,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer left = 0 ;
     Integer right = opportunities.size()-1;
     
-    while(left < right)
+    while(left <= right)
     {
         Integer i = left + (right - left) / 2;
         if(opportunities[i].Amount < target)
