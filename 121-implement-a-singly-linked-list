@@ -27,13 +27,15 @@ public class LinkedList{
     public Integer removeFromFront(){
 
         if(head == null)
-        return 0;
+        return null;
         Integer frontVal= head.data;
         if(head.next != null)
         head = head.next;
         else
+        {
         tail = null;
         size--;
+        }
         return frontVal;
 
     }
