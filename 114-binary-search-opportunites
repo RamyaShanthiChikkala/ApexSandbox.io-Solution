@@ -12,7 +12,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
              }
         else if(opportunities[i].Amount > target)
             {
-                right = i+1;
+                right = i-1;
             }
         else
             return i;
