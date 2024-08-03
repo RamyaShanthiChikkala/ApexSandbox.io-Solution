@@ -5,8 +5,8 @@ public static String reverseWords(String str){
 
  for(Integer i = 0 ; i < words.size(); i++)
  {
-     String rev = words[i].reverse();
-     words.set(i, rev);
+   
+     words.set(i, words[i].reverse());
  }
   return String.join(words, ' ');
 
