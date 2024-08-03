@@ -1,13 +1,11 @@
 public static List<Integer> squareList(List<Integer> nums){
    Integer temp;
    
-   
    for(Integer i = 0 ; i< nums.size();  i++)
    {
        nums.set(i,nums[i]*nums[i]);
    }
    
-
     for(Integer i = 0 ; i < nums.size() ; i++)
    {
        for(Integer j = i ; j < nums.size() ; j++ )
