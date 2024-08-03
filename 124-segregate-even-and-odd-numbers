@@ -1,18 +1,11 @@
 public static void segregateEvenOdd(List<Integer> numbers){
    Integer oddPos = 0;
-   Integer temp =numbers[0];
-   for(Integer i = 1 ; i <numbers.size(); i++)
+   for(Integer i = 0 ; i <numbers.size(); i++)
    {
-       if(Math.mod(numbers[i],2 ) == 0 )
-       {
-           numbers.set(i,temp);
-           numbers.set(i-1,numbers[i]);
-
-       }
-       else
-       {       
-           temp = numbers[i];
-       }
+        Integer temp = numbers[i];
+                numbers[i] = numbers[oddPos];
+                numbers[oddPos] = temp;
+                oddPos++;
     
    }
 }
