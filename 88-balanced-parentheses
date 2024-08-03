@@ -1,0 +1,30 @@
+public Boolean isValid(String s){
+  
+  List<String> stack = new List<String>();
+
+   Map<String, String> bracketMap = new Map<String, String>();
+   bracketMap.put('}','{');
+   bracketMap.put(')','(');
+   bracketMap.put(']','[');
+
+   for(Integer i = 0 ; i <s.length() ; i++)
+   {
+       String ch = s.substring(i, i + 1);
+        if(bracketMap.containsKey(ch))
+        {
+            if (!stack.isEmpty() && stack.get(stack.size() - 1) == bracketMap.get(ch))
+            stack.remove(stack.size()-1);
+            else
+            return false;
+        }
+        else
+        {
+            stack.add(ch);
+        }
+   }
+
+   return stack.isEmpty();
+
+
+
+}
