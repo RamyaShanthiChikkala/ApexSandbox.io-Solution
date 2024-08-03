@@ -1,0 +1,19 @@
+public Integer maxProfit(List<Integer> prices){
+ 
+
+ Integer prof = 0; 
+ for(Integer i = 0 ; i < prices.size() ; i ++ )
+ {
+     Integer currProf; 
+     for(Integer j = i ; j < prices.size() ; j++ )
+     {
+         currProf = prices[j] - prices[i];
+         if(currProf >= prof) 
+         {
+             prof = currProf;
+         }
+     }
+ }
+
+ return prof;
+}
