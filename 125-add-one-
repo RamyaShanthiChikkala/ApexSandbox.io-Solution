@@ -1,6 +1,6 @@
 public void plusOne(List<Integer> numbers) {
     
-for(Integer i = 0 ; i < numbers.size() ; i++)
+for(Integer i = numbers.size() -1 ; i > 1; i--)
 {
     Integer digit = numbers[i];
     if(digit == 9)
