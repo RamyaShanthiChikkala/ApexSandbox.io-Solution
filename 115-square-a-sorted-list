@@ -8,6 +8,17 @@ public static List<Integer> squareList(List<Integer> nums){
    }
    
    nums.sort();
-    
-    return nums;
+    for(Integer i = 0 ; i < nums.size() ; i++)
+   {
+       for(Integer j = i ; j < nums.size() ; j++ )
+       {
+           if(nums[i] >= nums[j])
+           {
+                temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+           }
+
+       }
+   }
 }
