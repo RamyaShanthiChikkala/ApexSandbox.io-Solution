@@ -19,7 +19,7 @@ public boolean isAnagram(String s1, String s2) {
 
   for(Integer i = 0 ; i < s2.size() ; i++)
   {
-       Integer c = ss.charAt(i);
+       Integer c = s2.charAt(i);
        Integer f;
       if(freqList.containsKey(c))
       {
