@@ -6,7 +6,7 @@ for(Integer i = numbers.size() -1 ; i > 1; i--)
     if(digit == 9)
     {
         numbers.set(i,0);
-        digit = numbers.get(i-1);
+        digit = 1+ numbers.get(i-1);
     }
     else
     {
