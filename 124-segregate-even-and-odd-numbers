@@ -2,7 +2,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
    Integer oddPos = 0;
    for(Integer i = 0 ; i <numbers.size(); i++)
    {
-       if (numbers[i] % 2 == 0) {
+       if (Math.mod(numbers[i],2)==0) {
         Integer temp = numbers[i];
                 numbers[i] = numbers[oddPos];
                 numbers[oddPos] = temp;
