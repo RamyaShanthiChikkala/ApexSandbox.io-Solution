@@ -3,7 +3,7 @@ public static String reverseWords(String str){
  List<String> words = new List<String>();
  words = str.split(' ');
 
- for(Integer i = 0 ; i < str.length() ; i++)
+ for(Integer i = 0 ; i < words.size(); i++)
  {
      String rev = words[i].reverse();
      words.set(i, rev);
