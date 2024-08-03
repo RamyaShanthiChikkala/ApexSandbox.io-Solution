@@ -17,24 +17,20 @@ public boolean isAnagram(String s1, String s2) {
        freqList.put(c,1);
   }
 
-  for(Integer i = 0 ; i < s2.size() ; i++)
-  {
-       Integer c = s2.charAt(i);
-       Integer f;
-      if(freqList.containsKey(c))
-      {
-          if(freqList.get(c) == 1){
-              freqList.remove(c);
-          }
-          else{
-          f = freqList.get(c) - 1 ;
-          freqList.put(c,f);
-          }
-      }
-      else
-       return false;
-  }
-
+  for (Integer i = 0; i < s2.length(); i++) {
+            Integer c = s2.charAt(i); // Convert character to its ASCII integer value
+            if (freqList.containsKey(c)) {
+                Integer count = freqList.get(c);
+                if (count == 1) {
+                    freqList.remove(c);
+                } else {
+                    freqList.put(c, count - 1);
+                }
+            } else {
+                // Character in s2 that isn't in s1 or mismatch
+                return false;
+            }
+        }
   return freqList.isEmpty();
 
 }
