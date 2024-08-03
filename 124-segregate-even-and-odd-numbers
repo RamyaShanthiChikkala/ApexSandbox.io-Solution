@@ -5,7 +5,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
    {
        if(Math.mod(numbers[i],2 ) == 0 )
        {
-           numbers.put(i,temp);
+           numbers.set(i,temp);
 
        }
        else
