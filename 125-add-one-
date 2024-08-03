@@ -1,18 +1,26 @@
 public void plusOne(List<Integer> numbers) {
     
-for(Integer i = numbers.size() -1 ; i > 1; i--)
+Integer carry = 1;
+
+for(int i = numbers.size() -1 ; i >= 0 ; i++)
 {
-    Integer digit = numbers[i];
-    if(digit >= 9)
+
+    Integer sum = numbers[i] + carry;
+
+    if(sum > 9)
     {
-        numbers.set(i,digit + 1);
-        digit = 1 + numbers.get(i-1);
+        carry = 1;
+        numbers.set(i,0);
+
     }
     else
     {
-        numbers.set(i,digit+1);
-        return;
+        carry = 0;
+        numbers.set(i, sum)
     }
+
+
+
 
 }
 
