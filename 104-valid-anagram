@@ -1,0 +1,40 @@
+public boolean isAnagram(String s1, String s2) {
+    if(s1.size()!= s2.size())
+    return false;
+  Map<Integer , Integer> freqList = new Map();
+  s1 = s1.toLowerCase();
+  s2 = s2.toLowerCase();
+  for(Integer i = 0 ; i < s1.size() ; i++)
+  {
+      Integer c = s1.charAt(i);
+      Integer f;
+      if(freqList.containsKey(c))
+      {
+          f = freqList.get(c) +1 ;
+          freqList.put(c,f);
+      }
+      else
+       freqList.put(c,1);
+  }
+
+  for(Integer i = 0 ; i < s2.size() ; i++)
+  {
+       Integer c = ss.charAt(i);
+       Integer f;
+      if(freqList.containsKey(c))
+      {
+          if(freqList.get(c) == 1){
+              freqList.remove(c);
+          }
+          else{
+          f = freqList.get(c) - 1 ;
+          freqList.put(c,f);
+          }
+      }
+      else
+       return false;
+  }
+
+  return freqList.isEmpty()
+
+}
