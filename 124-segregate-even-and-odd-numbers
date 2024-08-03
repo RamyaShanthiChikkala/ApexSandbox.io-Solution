@@ -5,8 +5,8 @@ public static void segregateEvenOdd(List<Integer> numbers){
    {
        if(Math.mod(numbers[i],2 ) == 0 )
        {
-           segregateEvenOdd.put(i,temp);
-           
+           numbers.put(i,temp);
+
        }
        else
        {       
