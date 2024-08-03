@@ -4,7 +4,7 @@ public static List<Integer> squareList(List<Integer> nums){
    {
        for(Integer j = i ; j < nums.size() ; j++ )
        {
-           if(nums[i] <= nums[j])
+           if(nums[i] >= nums[j])
            {
                 temp = nums[i];
                 nums[i] = nums[j];
