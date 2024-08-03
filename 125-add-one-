@@ -2,7 +2,7 @@ public void plusOne(List<Integer> numbers) {
     
 Integer carry = 1;
 
-for(int i = numbers.size() - 1 ; i >= 0 ; i++)
+for(Integer i = numbers.size() - 1 ; i >= 0 ; i++)
 {
     Integer sum = number.get(i) + carry;
     if(sum > 9)
@@ -14,7 +14,7 @@ for(int i = numbers.size() - 1 ; i >= 0 ; i++)
     {
         carry = 0;
         numbers.set(i, sum);
-        break;
+        
     }
 
 }
