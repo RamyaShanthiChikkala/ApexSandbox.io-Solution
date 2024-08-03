@@ -3,9 +3,9 @@ public static String reverseWords(String str){
  List<String> words = new List<String>();
  words = str.split(' ');
 
- for(String s : words)
+ for(Integer i = 0 ; i< str.length() ; i++)
  {
-     s = s.reverse();
+     words.set(i, words[i].reverse());
  }
   return String.join(words, ' ');
 
