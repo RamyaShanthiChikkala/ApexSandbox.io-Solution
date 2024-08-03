@@ -1,0 +1,20 @@
+public void plusOne(List<Integer> numbers) {
+    
+for(Integer i = 0 ; i < numbers.size() ; i++)
+{
+    Integer digit = numbers[i];
+    if(digit == 9)
+    {
+        numbers.set(i,0);
+        digit = numbers.get(i-1);
+    }
+    else
+    {
+        numbers.set(i,digit+1);
+        return;
+    }
+
+}
+
+
+}
