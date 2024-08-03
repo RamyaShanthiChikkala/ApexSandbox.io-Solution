@@ -1,0 +1,24 @@
+public Boolean isSubSequence(String s1, String s2){
+
+        Integer j = 0;
+        Integer len = s1.length();
+        for(Integer i = 0 ; i < s1.length() ; i++)
+        {
+            Integer c = s1.charAt(i);
+            while(j < s2.length())
+            {
+                if(c == s2.charAt(j))
+            
+                len--;
+            j++;
+            
+            }
+
+            
+        }
+
+        return (len==0);
+
+
+ 
+}
