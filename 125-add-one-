@@ -3,10 +3,10 @@ public void plusOne(List<Integer> numbers) {
 for(Integer i = numbers.size() -1 ; i > 1; i--)
 {
     Integer digit = numbers[i];
-    if(digit == 9)
+    if(digit >= 9)
     {
-        numbers.set(i,0);
-        digit = 1+ numbers.get(i-1);
+        numbers.set(i,digit + 1);
+        digit = 1 + numbers.get(i-1);
     }
     else
     {
