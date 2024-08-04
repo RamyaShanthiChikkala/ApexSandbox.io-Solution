@@ -8,6 +8,7 @@ public void defragging(Integer[] memory)
            Integer temp = memory[i];
                 memory[i] = memory[nonEmpty];
                 memory[nonEmpty] = temp;
+                nonEmpty++;
         }
        
     }
