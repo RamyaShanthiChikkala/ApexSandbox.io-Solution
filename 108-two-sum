@@ -18,6 +18,6 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
         
     }
    
-        return new List<Integer>();
+        return sumList;
 
 }
