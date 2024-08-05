@@ -1,6 +1,6 @@
 public List<Integer> twoSum(List<Integer> nums, Integer target){
 
-   if (nums == null  || target == null|| nums.size() == 0) {
+   if (nums == null  || target == null || nums.size() == 0|| target ==0)  {
         return null; 
     }
     List<Integer> twoNum = new List<Integer>();
