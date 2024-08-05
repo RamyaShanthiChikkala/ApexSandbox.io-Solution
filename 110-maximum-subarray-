@@ -17,4 +17,6 @@ public static Integer maxSubArraySum(List<Integer> nums, Integer target){
             win = target;
             windowSum = 0 ;
         }
+
+    return windowSumMax;
 }
