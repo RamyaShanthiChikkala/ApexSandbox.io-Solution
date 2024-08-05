@@ -10,7 +10,7 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
         secondNum = target - nums[i];
         if( numToIndex.containsKey(secondNum))
         {
-            secondNumPos = numToIndex.get(complement);
+            secondNumPos = numToIndex.get(secondNum);
             sumList.add(i);
             sumList.add(secondNumPos);
             return sumList;
