@@ -5,8 +5,8 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
   {
       if(nums[i]+nums[i+1] == target)
       {
-          twoNum.(i);
-          twoNum.(i+1);
+          twoNum.add(i);
+          twoNum.add(i+1);
           return twoNum;
       }
   }
