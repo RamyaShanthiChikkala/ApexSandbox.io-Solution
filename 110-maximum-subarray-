@@ -1,6 +1,6 @@
 public static Integer maxSubArraySum(List<Integer> nums, Integer target){
 
-     if (nums == null || nums.size() < target || target <= 0) {
+      if (nums == null || nums.size() < target || target <= 0) {
         return 0; 
     }
     Integer windowSum = 0;
