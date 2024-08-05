@@ -1,0 +1,24 @@
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+
+    List<Integer> sumList = new List<Integer>();
+    Integer secondNum = 0;
+    Integer secondNumPos = 0;
+
+    for(Integer i = 0 ; i < nums.size() ; i++)
+    {
+        secondNum = nums[i] - target;
+        if( nums.contains(secondNum))
+        {
+            secondNumPos = nums.indexOf(secondNum);
+            sumList.add(i);
+            sumList(secondNumPos);
+            
+        }
+        
+    }
+    if(sumList.isEmpty())   
+        return null ;
+    else
+        return sumList;
+
+}
