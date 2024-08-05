@@ -5,7 +5,7 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
     }
     List<Integer> twoNum = new List<Integer>();
    
-  for(Integer i = 0 ; i< nums.size()-1 ; i++)
+  for(Integer i = 0 ; i < nums.size()-1 ; i++)
   {
       if(nums[i]+nums[i+1] == target)
       {
@@ -16,5 +16,4 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
   }
 
   return null;
-
 }
