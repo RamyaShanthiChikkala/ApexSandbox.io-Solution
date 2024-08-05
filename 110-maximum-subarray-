@@ -7,7 +7,7 @@ public static Integer maxSubArraySum(List<Integer> nums, Integer target){
         {
             while(win > 0)
             {
-                windowSum = windowSum + nums[i];
+                windowSum += nums[i];
                 win--;
             }
             if(windowSum > windowSumMax)
