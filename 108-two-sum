@@ -12,14 +12,12 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
             secondNumPos = nums.indexOf(secondNum);
             sumList.add(i);
             sumList.add(secondNumPos);
+            return sumList
             
         }
         
     }
-    if(!sumList.isEmpty())   
-       return sumList;
-
-    else
+   
         return new List<Integer>();
 
 }
