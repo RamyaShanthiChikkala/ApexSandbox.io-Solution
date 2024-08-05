@@ -1,0 +1,20 @@
+public static Integer maxSubArraySum(List<Integer> nums, Integer target){
+
+    Integer windowSum = 0;
+    Integer windowSumMax = 0;
+    Integer win = target;
+        for(Integer i = 0 ; i <  nums.size() - target ; i++)
+        {
+            while(win > 0)
+            {
+                windowSum = windowSum + nums[i];
+                win--;
+            }
+            if(windowSum > windowSumMax)
+            {
+                windowSumMax = windowSum;
+            }
+            win = target;
+            windowSum = 0 ;
+        }
+}
