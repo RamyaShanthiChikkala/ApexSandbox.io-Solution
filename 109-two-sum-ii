@@ -1,0 +1,14 @@
+public List<Integer> twoSum(List<Integer> nums, Integer target){
+
+    List<Integer> twoNum = new List<Integer>();
+  for(Integer i = 0 ; i< nums.length()-1 ; i++)
+  {
+      if(nums[i]+nums[i+1] == target)
+      {
+          twoNum.(i);
+          twoNum.(i+1);
+          return twoNum;
+      }
+  }
+
+}
