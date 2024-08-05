@@ -19,6 +19,6 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
     if(!sumList.isEmpty())   
        return sumList;
     else
-        return null;
+        return new List<Integer>();
 
 }
