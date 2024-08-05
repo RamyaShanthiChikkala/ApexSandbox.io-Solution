@@ -1,8 +1,8 @@
 public static List<Integer> twoSum(List<Integer> nums, Integer target) {
 
     List<Integer> sumList = new List<Integer>();
-    Integer secondNum = 0;
-    Integer secondNumPos = 0;
+    Integer secondNum;
+    Integer secondNumPos;
 
     for(Integer i = 0 ; i < nums.size() ; i++)
     {
