@@ -1,21 +1,22 @@
 public static List<Integer> twoSum(List<Integer> nums, Integer target) {
 
     List<Integer> sumList = new List<Integer>();
+     Map<Integer, Integer> numToIndex = new Map<Integer, Integer>();
     Integer secondNum;
     Integer secondNumPos;
 
     for(Integer i = 0 ; i < nums.size() ; i++)
     {
         secondNum = target - nums[i];
-        if( nums.contains(secondNum))
+        if( numToIndex.containsKey(secondNum))
         {
-            secondNumPos = nums.indexOf(secondNum);
+            secondNumPos = numToIndex.get(complement);
             sumList.add(i);
             sumList.add(secondNumPos);
             return sumList;
             
         }
-        
+        numToIndex.put(nums[i], i);
     }
    
         return sumList;
