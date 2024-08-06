@@ -25,6 +25,6 @@ public List<String> commonChars(List<String> strs){
            
        }
     }
-    List<Integer> myList = new List<Integer>(myfreqMap.keySet());
+    List<Integer> myList = new List<Integer>(freqMap.keySet());
     return myList;
 }
