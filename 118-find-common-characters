@@ -26,6 +26,6 @@ public List<String> commonChars(List<String> strs){
        }
     }
 
-    return freqMap.keySet();
+    return (List<Integer>)freqMap.keySet();
 
 }
