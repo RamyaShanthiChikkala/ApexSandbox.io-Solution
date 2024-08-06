@@ -23,5 +23,5 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
                 right--;
             }
 
-  return null;
+  return result;
 }
