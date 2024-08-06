@@ -12,7 +12,7 @@ public List<String> commonChars(List<String> strs){
            else
             freqMap.put(chars[i],1);
        }
-    for(Integer j = 1 ; j < chars.size() ; j++)
+    for(Integer j = 1 ; j < strs.size() ; j++)
     {
        Integer[] chars = strs[j].getChars();
        for(Integer i = 0 ; i < chars.size() ; i++)
