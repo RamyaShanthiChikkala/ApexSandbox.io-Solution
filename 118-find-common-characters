@@ -1,0 +1,31 @@
+public List<String> commonChars(List<String> strs){
+   
+   Map<Integer,Integer> freqMap = new Map<Integer,Integer>(); 
+    Integer[] chars = strs[0].getChars();
+    for(Integer i = 0 ; i < chars.size() ; i++)
+       {
+           if(freqMap.containsKey(chars[i]))
+           {
+               Integer val = freqMap.get(chars[i]);
+               freqMap.put(chars[i],val+1);
+           }
+           else
+            freqMap.put(chars[i],1);
+       }
+    for(Integer j = 1 ; j < chars.size() ; j++)
+    {
+       Integer[] chars = strs[j].getChars();
+       for(Integer i = 0 ; i < chars.size() ; i++)
+       {
+           if(freqMap.containsKey(chars[i]))
+           {
+               Integer val = freqMap.get(chars[i]);
+               freqMap.put(chars[i],val+1);
+           }
+           
+       }
+    }
+
+    return freqMap.keySet();
+
+}
