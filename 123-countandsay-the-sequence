@@ -1,6 +1,7 @@
 public string countAndSay(integer N) {
-   if(N==1) return '1';
-   
+  if (N == 1) {
+            return '1';
+        }
     String prev = countAndSay(N - 1);
      String result = '';
      Integer count = 1;
@@ -12,7 +13,7 @@ public string countAndSay(integer N) {
                 count = 1;
             }
         }
-        
+
         result += count + prev.charAt(prev.length() - 1);
         
         return result;
