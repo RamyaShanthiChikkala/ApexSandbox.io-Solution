@@ -31,5 +31,5 @@ public List<String> commonChars(List<String> strs){
             result.add(String.fromCharArray(new List<Integer>{c}));
         }
     }
-
+    return result;
 }
