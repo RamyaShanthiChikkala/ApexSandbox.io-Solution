@@ -14,13 +14,13 @@ public List<String> commonChars(List<String> strs){
        }
     for(Integer j = 1 ; j < strs.size() ; j++)
     {
-       Integer[] chars = strs[j].getChars();
-       for(Integer i = 0 ; i < chars.size() ; i++)
+       Integer[] chars1 = strs[j].getChars();
+       for(Integer i = 0 ; i < chars1.size() ; i++)
        {
-           if(freqMap.containsKey(chars[i]))
+           if(freqMap.containsKey(chars1[i]))
            {
-               Integer val = freqMap.get(chars[i]);
-               freqMap.put(chars[i],val+1);
+               Integer val = freqMap.get(chars1[i]);
+               freqMap.put(chars1[i],val+1);
            }
            
        }
