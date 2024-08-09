@@ -11,8 +11,8 @@ public static Integer longestDistinctSubstring(String str, Integer k){
          Map<Integer, Integer> charCountMap = new Map<Integer, Integer>();
         Integer start = 0;
         Integer maxLength = 0;
-         for (Integer end = 0; end < n; end++) {
-            Integer currentChar = str.charAt(end);
+         for (Integer last = 0; last < n; last++) {
+            Integer currentChar = str.charAt(last);
             
             if (!charCountMap.containsKey(currentChar)) {
                 charCountMap.put(currentChar, 0);
@@ -27,7 +27,7 @@ public static Integer longestDistinctSubstring(String str, Integer k){
                 }
                 start++;
             }
-             maxLength = Math.max(maxLength, end - start + 1);
+             maxLength = Math.max(maxLength, last - start + 1);
         }
 
         return maxLength;
