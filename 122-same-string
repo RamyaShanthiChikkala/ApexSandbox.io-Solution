@@ -1,0 +1,20 @@
+public static Boolean sameString(String str1, String str2){
+  return processString(str1) == processString(str2);
+}
+ private static String processString(String str) {
+        String hash = '#'; 
+        List<Integer> result = new List<Integer>();
+        
+        for (Integer i = 0; i < str.length(); i++) {
+            Integer ch = str.charAt(i);
+            if (ch == hash) {
+                if (!result.isEmpty()) {
+                    result.remove(result.size() - 1);
+                }
+            } else {
+                result.add(ch);
+            }
+        }
+        
+        return String.valueOf(result);
+    }
