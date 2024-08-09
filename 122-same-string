@@ -7,7 +7,7 @@ public static Boolean sameString(String str1, String str2){
         
         for (Integer i = 0; i < str.length(); i++) {
             Integer ch = str.charAt(i);
-            if (ch == hash) {
+            if (ch == hash.value()) {
                 if (!result.isEmpty()) {
                     result.remove(result.size() - 1);
                 }
