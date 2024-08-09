@@ -26,7 +26,7 @@ public List<String> commonChars(List<String> strs){
                     currentFreqMap.put((chars1[i]), 1);
                 }  
        }
-    }
+    
     for (Integer i : freqMap.keySet()) {
             if (currentFreqMap.containsKey(ch)) {
                 freqMap.put(i, Math.min(freqMap.get(i), currentFreqMap.get(i)));
@@ -34,7 +34,7 @@ public List<String> commonChars(List<String> strs){
                 freqMap.put(i, 0);
             }
         }
-    
+    }
     List<String> result = new List<String>();
     for (Integer c : freqMap.keySet()) {
         Integer count = freqMap.get(c);
