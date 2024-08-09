@@ -1,0 +1,34 @@
+public static Integer longestDistinctSubstring(String str, Integer k){ 
+       if (str == null || k <= 0) {
+            return 0;
+        }
+
+          Integer n = str.length();
+        if (k > n) {
+            return 0; 
+         }
+
+         Map<Integer, Integer> charCountMap = new Map<Integer, Integer>();
+        Integer start = 0;
+        Integer maxLength = 0;
+         for (Integer end = 0; end < n; end++) {
+            Integer currentChar = str.charAt(end);
+            
+            if (!charCountMap.containsKey(currentChar)) {
+                charCountMap.put(currentChar, 0);
+            }
+            charCountMap.put(currentChar, charCountMap.get(currentChar) + 1);
+
+            while (charCountMap.size() > k) {
+                char startChar = str.charAt(start);
+                charCountMap.put(startChar, charCountMap.get(startChar) - 1);
+                if (charCountMap.get(startChar) == 0) {
+                    charCountMap.remove(startChar);
+                }
+                start++;
+            }
+             maxLength = Math.max(maxLength, end - start + 1);
+        }
+
+        return maxLength;
+    }
