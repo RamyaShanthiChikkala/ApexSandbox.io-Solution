@@ -28,7 +28,7 @@ public List<String> commonChars(List<String> strs){
        }
     
     for (Integer i : freqMap.keySet()) {
-            if (currentFreqMap.containsKey(ch)) {
+            if (currentFreqMap.containsKey(chars1[i])) {
                 freqMap.put(i, Math.min(freqMap.get(i), currentFreqMap.get(i)));
             } else {
                 freqMap.put(i, 0);
