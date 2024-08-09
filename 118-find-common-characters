@@ -1,4 +1,7 @@
 public List<String> commonChars(List<String> strs){
+     if (strs == null || strs.isEmpty()) {
+        return new List<String>();
+    }
    Map<Integer,Integer> freqMap = new Map<Integer,Integer>(); 
     Integer[] chars = strs[0].getChars();
     for(Integer i = 0 ; i < chars.size() ; i++)
@@ -13,16 +16,24 @@ public List<String> commonChars(List<String> strs){
        }
     for(Integer j = 1 ; j < strs.size() ; j++)
     {
+    Map<Integer, Integer> currentFreqMap = new Map<Integer, Integer>();
        Integer[] chars1 = strs[j].getChars();
        for(Integer i = 0 ; i < chars1.size() ; i++)
        {
-           if(freqMap.containsKey(chars1[i]))
-           {
-               Integer val = freqMap.get(chars1[i]);
-               freqMap.put(chars1[i],val+1);
-           }
-           
+            if (currentFreqMap.containsKey(ch)) {
+                    currentFreqMap.put(ch, currentFreqMap.get(chars1[i]) + 1);
+                } else {
+                    currentFreqMap.put((chars1[i]), 1);
+                }  
        }
+    }
+    for (Integer i : freqMap.keySet()) {
+            if (currentFreqMap.containsKey(ch)) {
+                freqMap.put(i, Math.min(freqMap.get(i), currentFreqMap.get(i)));
+            } else {
+                freqMap.put(i, 0);
+            }
+        }
     }
     List<String> result = new List<String>();
     for (Integer c : freqMap.keySet()) {
