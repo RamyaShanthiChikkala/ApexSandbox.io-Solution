@@ -20,7 +20,7 @@ public List<String> commonChars(List<String> strs){
        Integer[] chars1 = strs[j].getChars();
        for(Integer i = 0 ; i < chars1.size() ; i++)
        {
-            if (currentFreqMap.containsKey(ch)) {
+            if (currentFreqMap.containsKey(chars1[i])) {
                     currentFreqMap.put(ch, currentFreqMap.get(chars1[i]) + 1);
                 } else {
                     currentFreqMap.put((chars1[i]), 1);
