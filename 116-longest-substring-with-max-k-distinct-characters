@@ -20,7 +20,7 @@ public static Integer longestDistinctSubstring(String str, Integer k){
             charCountMap.put(currentChar, charCountMap.get(currentChar) + 1);
 
             while (charCountMap.size() > k) {
-                char startChar = str.charAt(start);
+                Integer startChar = str.charAt(start);
                 charCountMap.put(startChar, charCountMap.get(startChar) - 1);
                 if (charCountMap.get(startChar) == 0) {
                     charCountMap.remove(startChar);
